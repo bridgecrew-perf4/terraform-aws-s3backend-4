@@ -52,7 +52,7 @@ data "aws_iam_policy_document" "policy_doc" {
 
   statement {
     actions = [
-      "dynamdb:GetItem",
+      "dynamodb:GetItem",
       "dynamodb:PutItem",
       "dynamodb:DeleteItem"
     ]
