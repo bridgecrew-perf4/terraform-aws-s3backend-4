@@ -46,7 +46,7 @@ data "aws_iam_policy_document" "policy_doc" {
     "s3:GetObject", "s3:PutObject"]
 
     resources = [
-      "${aws_s3_bucket.arn}/*",
+      "${aws_s3_bucket.s3_bucket.arn}/*",
     ]
   }
 
@@ -56,7 +56,7 @@ data "aws_iam_policy_document" "policy_doc" {
       "dynamodb:PutItem",
       "dynamodb:DeleteItem"
     ]
-    resources = [aws_dynamodb_table.daynamodb_table.arn]
+    resources = [aws_dynamodb_table.dynamodb_table.arn]
   }
 }
 
