@@ -20,8 +20,10 @@ resource "aws_resourcegroups_group" "resourcegroups_group" {
            "AWS::AllSupported"
         ],
         "TagFilters": [
+          {
             "Key": "ResourceGroup",
             "Values": ["${local.namespace}"]
+            }
         ]
     }
   }
